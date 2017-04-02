@@ -7,14 +7,54 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F72A201C1E82D5CC00B0FE04 /* Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72A201B1E82D5CC00B0FE04 /* Border.swift */; };
+		F72A201E1E8AFCE600B0FE04 /* kodai.csv in Resources */ = {isa = PBXBuildFile; fileRef = F72A201D1E8AFCE600B0FE04 /* kodai.csv */; };
+		F72A20261E8B08F500B0FE04 /* kinsei.csv in Resources */ = {isa = PBXBuildFile; fileRef = F72A20251E8B08F500B0FE04 /* kinsei.csv */; };
+		F72A20281E8C339A00B0FE04 /* chusei.csv in Resources */ = {isa = PBXBuildFile; fileRef = F72A20271E8C339A00B0FE04 /* chusei.csv */; };
+		F72A202A1E8C33E200B0FE04 /* kindai.csv in Resources */ = {isa = PBXBuildFile; fileRef = F72A20291E8C33E200B0FE04 /* kindai.csv */; };
+		F7547D241E784F33003739EC /* EraData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7547D231E784F33003739EC /* EraData.swift */; };
 		F76866711E6AF14F00BDFCD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76866701E6AF14F00BDFCD5 /* AppDelegate.swift */; };
 		F76866731E6AF14F00BDFCD5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76866721E6AF14F00BDFCD5 /* ViewController.swift */; };
 		F76866761E6AF14F00BDFCD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F76866741E6AF14F00BDFCD5 /* Main.storyboard */; };
 		F76866781E6AF14F00BDFCD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F76866771E6AF14F00BDFCD5 /* Assets.xcassets */; };
 		F768667B1E6AF14F00BDFCD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F76866791E6AF14F00BDFCD5 /* LaunchScreen.storyboard */; };
+		F76866871E6B0DEE00BDFCD5 /* QuestionDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76866861E6B0DEE00BDFCD5 /* QuestionDataManager.swift */; };
+		F76866911E6B347B00BDFCD5 /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76866901E6B347B00BDFCD5 /* SelectViewController.swift */; };
+		F76866931E6BE55000BDFCD5 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76866921E6BE55000BDFCD5 /* QuestionViewController.swift */; };
+		F76866951E6C00AA00BDFCD5 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76866941E6C00AA00BDFCD5 /* ResultViewController.swift */; };
+		F76866991E6C205600BDFCD5 /* timerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76866981E6C205600BDFCD5 /* timerManager.swift */; };
+		F768669B1E6C2CBF00BDFCD5 /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F768669A1E6C2CBF00BDFCD5 /* AnswerViewController.swift */; };
+		F768669D1E6DBF4100BDFCD5 /* PastDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F768669C1E6DBF4100BDFCD5 /* PastDataManager.swift */; };
+		F76866C31E74A0C500BDFCD5 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F76866C21E74A0C500BDFCD5 /* RealmSwift.framework */; };
+		F76866C41E74A0C500BDFCD5 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F76866C21E74A0C500BDFCD5 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F76866C71E74A0D700BDFCD5 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F76866C61E74A0D700BDFCD5 /* Realm.framework */; };
+		F76866C81E74A0D700BDFCD5 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F76866C61E74A0D700BDFCD5 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F76866CA1E74A13A00BDFCD5 /* RecordedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76866C91E74A13A00BDFCD5 /* RecordedData.swift */; };
+		F76866CE1E74FC2C00BDFCD5 /* RecordListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76866CD1E74FC2C00BDFCD5 /* RecordListCell.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F76866C51E74A0C500BDFCD5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F76866C81E74A0D700BDFCD5 /* Realm.framework in Embed Frameworks */,
+				F76866C41E74A0C500BDFCD5 /* RealmSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		F72A201B1E82D5CC00B0FE04 /* Border.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Border.swift; sourceTree = "<group>"; };
+		F72A201D1E8AFCE600B0FE04 /* kodai.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = kodai.csv; sourceTree = "<group>"; };
+		F72A20251E8B08F500B0FE04 /* kinsei.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = kinsei.csv; sourceTree = "<group>"; };
+		F72A20271E8C339A00B0FE04 /* chusei.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = chusei.csv; sourceTree = "<group>"; };
+		F72A20291E8C33E200B0FE04 /* kindai.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = kindai.csv; sourceTree = "<group>"; };
+		F7547D231E784F33003739EC /* EraData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EraData.swift; sourceTree = "<group>"; };
 		F768666D1E6AF14F00BDFCD5 /* j-history-Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "j-history-Quiz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F76866701E6AF14F00BDFCD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F76866721E6AF14F00BDFCD5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +62,17 @@
 		F76866771E6AF14F00BDFCD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F768667A1E6AF14F00BDFCD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F768667C1E6AF14F00BDFCD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F76866861E6B0DEE00BDFCD5 /* QuestionDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionDataManager.swift; sourceTree = "<group>"; };
+		F76866901E6B347B00BDFCD5 /* SelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectViewController.swift; sourceTree = "<group>"; };
+		F76866921E6BE55000BDFCD5 /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		F76866941E6C00AA00BDFCD5 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		F76866981E6C205600BDFCD5 /* timerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = timerManager.swift; sourceTree = "<group>"; };
+		F768669A1E6C2CBF00BDFCD5 /* AnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
+		F768669C1E6DBF4100BDFCD5 /* PastDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PastDataManager.swift; sourceTree = "<group>"; };
+		F76866C21E74A0C500BDFCD5 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		F76866C61E74A0D700BDFCD5 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		F76866C91E74A13A00BDFCD5 /* RecordedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordedData.swift; sourceTree = "<group>"; };
+		F76866CD1E74FC2C00BDFCD5 /* RecordListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecordListCell.swift; path = ../RecordListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +80,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F76866C71E74A0D700BDFCD5 /* Realm.framework in Frameworks */,
+				F76866C31E74A0C500BDFCD5 /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +91,8 @@
 		F76866641E6AF14F00BDFCD5 = {
 			isa = PBXGroup;
 			children = (
+				F76866C61E74A0D700BDFCD5 /* Realm.framework */,
+				F76866C21E74A0C500BDFCD5 /* RealmSwift.framework */,
 				F768666F1E6AF14F00BDFCD5 /* j-history-Quiz */,
 				F768666E1E6AF14F00BDFCD5 /* Products */,
 			);
@@ -54,9 +109,24 @@
 		F768666F1E6AF14F00BDFCD5 /* j-history-Quiz */ = {
 			isa = PBXGroup;
 			children = (
+				F76866741E6AF14F00BDFCD5 /* Main.storyboard */,
+				F72A201B1E82D5CC00B0FE04 /* Border.swift */,
+				F7547D231E784F33003739EC /* EraData.swift */,
+				F76866CD1E74FC2C00BDFCD5 /* RecordListCell.swift */,
 				F76866701E6AF14F00BDFCD5 /* AppDelegate.swift */,
 				F76866721E6AF14F00BDFCD5 /* ViewController.swift */,
-				F76866741E6AF14F00BDFCD5 /* Main.storyboard */,
+				F76866861E6B0DEE00BDFCD5 /* QuestionDataManager.swift */,
+				F76866921E6BE55000BDFCD5 /* QuestionViewController.swift */,
+				F768669C1E6DBF4100BDFCD5 /* PastDataManager.swift */,
+				F768669A1E6C2CBF00BDFCD5 /* AnswerViewController.swift */,
+				F76866941E6C00AA00BDFCD5 /* ResultViewController.swift */,
+				F76866C91E74A13A00BDFCD5 /* RecordedData.swift */,
+				F76866901E6B347B00BDFCD5 /* SelectViewController.swift */,
+				F76866981E6C205600BDFCD5 /* timerManager.swift */,
+				F72A201D1E8AFCE600B0FE04 /* kodai.csv */,
+				F72A20271E8C339A00B0FE04 /* chusei.csv */,
+				F72A20251E8B08F500B0FE04 /* kinsei.csv */,
+				F72A20291E8C33E200B0FE04 /* kindai.csv */,
 				F76866771E6AF14F00BDFCD5 /* Assets.xcassets */,
 				F76866791E6AF14F00BDFCD5 /* LaunchScreen.storyboard */,
 				F768667C1E6AF14F00BDFCD5 /* Info.plist */,
@@ -74,6 +144,7 @@
 				F76866691E6AF14F00BDFCD5 /* Sources */,
 				F768666A1E6AF14F00BDFCD5 /* Frameworks */,
 				F768666B1E6AF14F00BDFCD5 /* Resources */,
+				F76866C51E74A0C500BDFCD5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -91,7 +162,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = history;
 				TargetAttributes = {
 					F768666C1E6AF14F00BDFCD5 = {
@@ -124,9 +195,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F72A201E1E8AFCE600B0FE04 /* kodai.csv in Resources */,
 				F768667B1E6AF14F00BDFCD5 /* LaunchScreen.storyboard in Resources */,
+				F72A202A1E8C33E200B0FE04 /* kindai.csv in Resources */,
+				F72A20261E8B08F500B0FE04 /* kinsei.csv in Resources */,
 				F76866781E6AF14F00BDFCD5 /* Assets.xcassets in Resources */,
 				F76866761E6AF14F00BDFCD5 /* Main.storyboard in Resources */,
+				F72A20281E8C339A00B0FE04 /* chusei.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +212,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F76866911E6B347B00BDFCD5 /* SelectViewController.swift in Sources */,
+				F76866931E6BE55000BDFCD5 /* QuestionViewController.swift in Sources */,
+				F72A201C1E82D5CC00B0FE04 /* Border.swift in Sources */,
+				F76866991E6C205600BDFCD5 /* timerManager.swift in Sources */,
+				F76866871E6B0DEE00BDFCD5 /* QuestionDataManager.swift in Sources */,
+				F768669B1E6C2CBF00BDFCD5 /* AnswerViewController.swift in Sources */,
+				F76866CA1E74A13A00BDFCD5 /* RecordedData.swift in Sources */,
+				F7547D241E784F33003739EC /* EraData.swift in Sources */,
 				F76866731E6AF14F00BDFCD5 /* ViewController.swift in Sources */,
+				F76866CE1E74FC2C00BDFCD5 /* RecordListCell.swift in Sources */,
 				F76866711E6AF14F00BDFCD5 /* AppDelegate.swift in Sources */,
+				F76866951E6C00AA00BDFCD5 /* ResultViewController.swift in Sources */,
+				F768669D1E6DBF4100BDFCD5 /* PastDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +268,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -204,7 +291,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -231,6 +318,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -247,7 +335,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -260,6 +348,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6J98CKTEJN;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "j-history-Quiz/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = shohei.ogawa;
@@ -273,6 +365,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6J98CKTEJN;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "j-history-Quiz/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = shohei.ogawa;
@@ -300,6 +396,7 @@
 				F76866811E6AF14F00BDFCD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
