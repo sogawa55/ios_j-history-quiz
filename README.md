@@ -7,9 +7,9 @@
 * 回答結果のSNSシェア機能も搭載
 
 ## スクリーンショット
-![トップ画面](docs/image1.jpg)
-![クイズ画面](docs/image3.jpg)
-![結果画面](docs/image4.jpg)
+![トップ画面](docs/image1.jpg)  
+![クイズ画面](docs/image3.jpg)  
+![結果画面](docs/image4.jpg)  
 
 ## 実行環境
 * プロジェクトをダウンロード
