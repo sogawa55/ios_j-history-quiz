@@ -13,5 +13,5 @@
 
 ## 実行環境
 * プロジェクトをダウンロード
-* Xcodeで実行！
+* Xcode8.2
 * 対応：iOS 9.0以降 iPhone6、iPhone6s、iPhone7
