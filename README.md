@@ -12,6 +12,6 @@
 ![結果画面](docs/image4.jpg)  
 
 ## 実行環境
-* プロジェクトをダウンロード
-* Xcode8.2
+* Swift3.0
+* Xcode8.2 (Xcode8.3以降だと動かない可能性があります) 
 * 対応：iOS 9.0以降 iPhone6、iPhone6s、iPhone7
