@@ -1,10 +1,4 @@
-//
-//  AppDelegate.swift
-//  j-history-Quiz
-//
-//  Created by shohei on 2017/03/04.
-//  Copyright © 2017年 history. All rights reserved.
-//
+
 
 import UIKit
 import RealmSwift
@@ -18,9 +12,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-       //データベースを1回更新
+       //マイグレーション回数の記録
         let config = Realm.Configuration(
             
+            //スキーマバージョン
             schemaVersion: 1,
             
             
