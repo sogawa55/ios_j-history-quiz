@@ -1,18 +1,13 @@
-//
-//  AnswerViewController.swift
-//  j-history-Quiz
-//
-//  Created by shohei on 2017/03/05.
-//  Copyright © 2017年 history. All rights reserved.
-//
+
 
 import Foundation
 import UIKit
 
 class AnswerViewController: UIViewController {
     static let sharedInstance = AnswerViewController()
-
-
+　　　
+    //問題文テキストと回答ラベルをOutlet接続
+　　　
     @IBOutlet weak var Q1Text: UITextView!
     @IBOutlet weak var A1Text: UILabel!
     
@@ -47,6 +42,7 @@ class AnswerViewController: UIViewController {
     override func viewDidLoad(){
         super.viewDidLoad()
         
+        //回答済みデータを格納した配列から値を設定
         Q1Text.text = String(PastDataManager.sharedInstance.PastDataArray[0])
         A1Text.text = String(PastDataManager.sharedInstance.PastAnswerArray[0])
         
@@ -83,6 +79,7 @@ class AnswerViewController: UIViewController {
     //結果画面に戻る
     @IBAction func resultViewBack(_ sender: Any) {
         
+        //識別子の示す画面に遷移
         let storyboard: UIStoryboard = self.storyboard!
         let nextView = storyboard.instantiateViewController(withIdentifier: "result")
         present(nextView, animated: true, completion: nil)
@@ -91,12 +88,15 @@ class AnswerViewController: UIViewController {
     //トップ画面に戻る
     @IBAction func TopViewback(_ sender: Any) {
         
+        //識別子の示す画面に遷移
         let storyboard: UIStoryboard = self.storyboard!
         let nextView = storyboard.instantiateViewController(withIdentifier: "Top")
         present(nextView, animated: true, completion: nil)
         
+        //タイマーの初期化
         timerManager.sharedInstance.seconds = 0
         timerManager.sharedInstance.fractions = 0
+        //回答済みデータの初期化
         PastDataManager.sharedInstance.PastAnswerArray.removeAll()
         QuestionDataManager.sharedInstance.questionDataArray.removeAll()
         
