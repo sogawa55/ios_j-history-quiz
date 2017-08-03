@@ -1,10 +1,4 @@
-//
-//  ViewController.swift
-//  j-history-Quiz
-//
-//  Created by shohei on 2017/03/04.
-//  Copyright © 2017年 history. All rights reserved.
-//
+
 
 import UIKit
 
@@ -13,7 +7,6 @@ class ViewController: UIViewController {
     @IBAction func StartButton(_ sender: Any) {
         
         //問題データの初期化
-        
         QuestionDataManager.sharedInstance.nowQuestionIndex = 0
         QuestionDataManager.sharedInstance.questionPath = ""
         QuestionDataManager.sharedInstance.questionDataArray.removeAll()
