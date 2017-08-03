@@ -1,10 +1,4 @@
-//
-//  Record.swift
-//  j-history-Quiz
-//
-//  Created by shohei on 2017/03/12.
-//  Copyright © 2017年 history. All rights reserved.
-//
+
 
 import Foundation
 import RealmSwift
