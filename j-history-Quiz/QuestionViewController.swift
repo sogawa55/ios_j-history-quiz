@@ -1,20 +1,13 @@
-//
-//  QuestionViewController.swift
-//  j-history-Quiz
-//
-//  Created by shohei on 2017/03/05.
-//  Copyright © 2017年 history. All rights reserved.
-//
+
 
 import UIKit
 import AudioToolbox
 
 class QuestionViewController: UIViewController{
-
-    //QuestionViewControllerに表示するラベルを接続
-
+    //前画面からデータを受け取るために、QuestionData型のプロパティを宣言
     var questionData: QuestionData!
     
+    //QuestionViewControllerに表示するラベルを接続
     @IBOutlet weak var questionNoLabel: UILabel!
     
     @IBOutlet weak var questionTextView: UITextView!
@@ -33,18 +26,19 @@ class QuestionViewController: UIViewController{
   
     
     @IBOutlet weak var correctImageView: UIImageView!
-    
+  
     @IBOutlet weak var incorrectImageView: UIImageView!
     
+    //タイマーインスタンス生成
     var timer = Timer()
-    
+    //回答済みデータ格納用の配列を宣言
     var pastQuestion = [String]()
-    
+    //回答番号を格納
     var answer: String = ""
     
     //タイマーを起動
     func updateStopwatch() {
-        
+        //シングルトンオブジェクトを参照
         timerManager.sharedInstance.fractions += 1
         if timerManager.sharedInstance.fractions == 100 {
             timerManager.sharedInstance.seconds += 1
@@ -63,9 +57,9 @@ class QuestionViewController: UIViewController{
     super.viewDidLoad()
         
 
-            timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(QuestionViewController.updateStopwatch), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(QuestionViewController.updateStopwatch), userInfo: nil, repeats: true)
         
-        //ラベルに問題データを格納
+        //前画面から受け取ったデータをラベルに反映
         questionNoLabel?.text = "Q.\(QuestionDataManager.sharedInstance.questionNo)"
         
         questionTextView.text = questionData.question
@@ -80,7 +74,7 @@ class QuestionViewController: UIViewController{
          pastQuestion.append(questionData.question)
         
         for i in pastQuestion {
-         
+         　 //シングルトンオブジェトを参照
             PastDataManager.sharedInstance.PastDataArray.append(i)
         
         }
@@ -89,19 +83,14 @@ class QuestionViewController: UIViewController{
          pastAnswer.append(questionData.correctAnswer)
         
         for i in pastAnswer {
-            
+            //シングルトンオブジェトを参照
             PastDataManager.sharedInstance.PastAnswerArray.append(i)
             
             print(PastDataManager.sharedInstance.PastAnswerArray.append(i))
             
         }
 
-        
-        
     }
-    
-    
-    
     
     
     override func didReceiveMemoryWarning() {
@@ -109,7 +98,6 @@ class QuestionViewController: UIViewController{
     }
     
     //回答ボタンを押した際に次の問題を読み込み、タイマーを一時停止
-    
     @IBAction func tapAnswer1Button(_ sender: Any) {
         questionData.userChoiceAnswerNumber = 1
         goNextQuestionWithAnimation()
@@ -168,9 +156,9 @@ class QuestionViewController: UIViewController{
     
     //次の問題を読み込む、問題がなければ結果画面を表示
     func goNextQuestion(){
-        
+    //問題番号をプラス    
     QuestionDataManager.sharedInstance.questionNo += 1
-        
+        //nextQuestionメソッドを呼び出して次の問題を取り出す
         guard let nextQuestion =
             QuestionDataManager.sharedInstance.nextQuestion() else {
                 if let resultViewController = storyboard?.instantiateViewController(withIdentifier: "result") as? ResultViewController {
@@ -178,11 +166,12 @@ class QuestionViewController: UIViewController{
                 }
                 return
         }
-        
-        
+        //viewControllerを生成する
         if let nextQuestionViewController =
             storyboard?.instantiateViewController(withIdentifier: "question") as? QuestionViewController{
+            //questionDaraプロパティに取り出した次の問題を格納
             nextQuestionViewController.questionData = nextQuestion
+            //画面遷移処理
             present(nextQuestionViewController, animated: true, completion: nil)
             
         }
