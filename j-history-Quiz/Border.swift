@@ -1,16 +1,10 @@
-//
-//  UIView+Border.swift
-//  j-history-Quiz
-//
-//  Created by shohei on 2017/03/23.
-//  Copyright © 2017年 history. All rights reserved.
-//
+
 
 import UIKit
 
 extension UIView {
     
-    // 枠線の色
+    // ラベルに枠線を表示させる
     @IBInspectable var borderColor: UIColor? {
         get {
             return layer.borderColor.map { UIColor(cgColor: $0) }
@@ -20,7 +14,7 @@ extension UIView {
         }
     }
     
-    // 枠線のWidth
+    // ラベルの枠線の広さを設定可能に
     @IBInspectable var borderWidth: CGFloat {
         get {
             return layer.borderWidth
@@ -30,7 +24,7 @@ extension UIView {
         }
     }
     
-    // 角丸設定
+    // 枠線の角を丸くさせる
     @IBInspectable var cornerRadius: CGFloat {
         get {
             return layer.cornerRadius
