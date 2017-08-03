@@ -1,10 +1,4 @@
-//
-//  EraData.swift
-//  j-history-Quiz
-//
-//  Created by shohei on 2017/03/15.
-//  Copyright © 2017年 history. All rights reserved.
-//
+
 
 import Foundation
 
@@ -12,7 +6,7 @@ import Foundation
 class EraData{
     
  static let sharedInstance = EraData()
-    
+    //変数宣言
     var selectEra:String = ""
     
 }
