@@ -44,17 +44,17 @@ class QuestionData{
 class QuestionDataManager{
     //シングルトンオブジェクト生成
     static let sharedInstance = QuestionDataManager()
-    //問題画面に表示する問題番号
+    
     var questionNo: Int = 1
-    //問題データを格納する配列
+  
     var questionDataArray = [QuestionData]()
-    //回答済みデータ数
+    
     var PastData:Int = 0
-    //配列に渡す問題番号のキー
+    
     var nowQuestionIndex: Int = 0
-    //配列に渡すランダムキー
+    
     var shuffleCounter:Int = 0
-    //選択した年代を格納
+ 
     var questionPath = ""
 
     private init()
@@ -80,11 +80,9 @@ class QuestionDataManager{
             //enumerateLinesメソッドで改行ごとに処理を行い、1行分のデータはline変数に格納
             csvStringData.enumerateLines(invoking: { (line, stop) in
                 //componentsメソッドでカンマ区切りで文字列を分解し、配列に格納する                                      
-               let questionSourceDataArray = line.components(separatedBy: ",")
-                //questionSourceDataArrayを引数に指定して、QuestionDataクラスのインスタンスを生成                                    
+               let questionSourceDataArray = line.components(separatedBy: ",")      
                 let questionData = QuestionData(questionSourceDataArray:
-                    questionSourceDataArray)
-                //QuestionDataインスタンスを配列に格納                                    
+                    questionSourceDataArray)                                  
                 self.questionDataArray.append(questionData)
               
                   })
@@ -111,11 +109,11 @@ class QuestionDataManager{
     func nextQuestion() -> QuestionData?{
         
         if shuffleCounter <  10 {
-            //問題キーにシャッフルしたキーを格納
+        
             nowQuestionIndex = Int(shuffleArray[shuffleCounter])!
-           //問題キーをもとに、問題データを取り出し格納
+           
             let nextQuestion = questionDataArray[nowQuestionIndex]
-            //カウンターを増やす
+    
             shuffleCounter += 1
             return nextQuestion
             
