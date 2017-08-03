@@ -1,15 +1,9 @@
-//
-//  ResultViewController.swift
-//  j-history-Quiz
-//
-//  Created by shohei on 2017/03/05.
-//  Copyright © 2017年 history. All rights reserved.
-//
+
 
 import UIKit
 import RealmSwift
 
-//回答結果を表示
+//過去の回答結果を表示するテーブルビューを用意
 class ResultViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var correctPrecentLabel: UILabel!
@@ -38,17 +32,17 @@ class ResultViewController: UIViewController,UITableViewDelegate, UITableViewDat
         //合計時間を表示
         TimeLabel.text = String(timerManager.sharedInstance.stopwatchString) + "秒"
    
-        //回答した問題数をと正解数をから正解率を格納
+        //問題数回答数
         questionCount =
         QuestionDataManager.sharedInstance.questionDataArray.count
         var correctCount: Int = 0
-        
+        //QuestionData型のインスタンスが格納された配列を回して、それぞれでisCorrectメソッドを呼ぶことで、正解数をカウントする。
         for questionData in QuestionDataManager.sharedInstance.questionDataArray{
             if questionData.isCorrect(){
             correctCount += 1
             }
         }
-        
+        //正解率の算出
         let correctPercent: Float = (Float(correctCount)/Float(10)) * 100
         correctPrecentLabel.text = String(format: "%.1f", correctPercent) + "%"
         
@@ -116,16 +110,16 @@ class ResultViewController: UIViewController,UITableViewDelegate, UITableViewDat
        
     }
     
- 
+ 　 //過去8回分のセルのテーブルを返す
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:RecordListCell = tableView.dequeueReusableCell(withIdentifier: "recordCell", for: indexPath) as! RecordListCell
-        
+        //Realmを起動
         let realm = try! Realm()
+        //新しい順にソートしてデータを読み出す
         RecordList = realm.objects(RecordedData.self).sorted(byKeyPath: "created", ascending: false)
         
-        
         let recordData:RecordedData = self.RecordList[indexPath.row]
-   
+   　　　//セルにRealmから読みだした値を設定
         cell.RecordEraLabel .text = RecordList[indexPath.row].RecordedEra
 
         cell.RecordScoreLabel .text = RecordList[indexPath.row].RecordedScore
@@ -134,8 +128,10 @@ class ResultViewController: UIViewController,UITableViewDelegate, UITableViewDat
         
         cell.RecordRankLabel .text = RecordList[indexPath.row].RecordedRank
         
+        //データを記録した年月日時を格納
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy/MM/dd' 'HH:mm:ss"
+        //セルに値を設定
         cell.RecordDateLabel.text = formatter.string(from: recordData.created)
         
         return cell
@@ -157,16 +153,20 @@ class ResultViewController: UIViewController,UITableViewDelegate, UITableViewDat
     
     //回答データを初期化してトップ画面に戻る
     @IBAction func goToTitle(_ sender: Any) {
-        
+        //選択肢た年代の初期化
         QuestionDataManager.sharedInstance.questionPath = ""
+        //タイマーの初期化
         timerManager.sharedInstance.seconds = 0
         timerManager.sharedInstance.fractions = 0
+        //回答済みデータの削除
         PastDataManager.sharedInstance.PastAnswerArray.removeAll()
         QuestionDataManager.sharedInstance.questionDataArray.removeAll()
 
         
         let storyboard: UIStoryboard = self.storyboard!
+        //viewControllerの生成
         let nextView = storyboard.instantiateViewController(withIdentifier: "Top")
+        //画面遷移処理
         present(nextView, animated: true, completion: nil)
         
     }
